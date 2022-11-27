@@ -49,7 +49,7 @@ steps:
 
 - task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'java-hello-world-with-maven/pom.xml'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
@@ -57,4 +57,3 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
   condition: eq(variables.RepoName, 'B')
-
