@@ -34,6 +34,8 @@ steps:
 - checkout: self
   condition: eq(variables.RepoName, 'A')
 
+- checkout: java-hello-world-with-maven
+  condition: eq(variables.RepoName, 'B')
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
@@ -44,3 +46,15 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
   condition: eq(variables.RepoName, 'A')
+
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+  condition: eq(variables.RepoName, 'B')
+
