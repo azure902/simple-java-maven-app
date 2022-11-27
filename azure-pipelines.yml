@@ -38,7 +38,7 @@ steps:
   condition: eq(variables.RepoName, 'B')
 - task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'simple-java-maven-app/pom.xml'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
