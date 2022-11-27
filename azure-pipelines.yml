@@ -18,12 +18,12 @@ pool:
 
 parameters:
   - name: RepoName
-    displayName: :Select Repo
+    displayName: Select Repo
     type: string
-    default: 'A'
+    default: A
     values:
-      - 'A'
-      - 'B'
+      - A
+      - B
 
 variables:
  - name: RepoName
