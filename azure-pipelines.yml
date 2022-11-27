@@ -8,6 +8,7 @@ trigger: none
 resources:
  repositories:
    - repository: java-hello-world-with-maven
+     type: github
      endpoint: azure902
      name: azure902/java-hello-world-with-maven
      ref: master
